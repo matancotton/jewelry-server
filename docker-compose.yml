@@ -24,3 +24,4 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - ./db/data.json:/app/db/data.json # Mount the data.json file

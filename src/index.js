@@ -4,10 +4,10 @@ import typeDefs from './graphql/schema.js';
 import resolvers from './graphql/resolver.js';
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
-// import importData from '../db/importData.js';
+import importData from '../db/importData.js';
 
 await connectToDatabase();
-// await importData();
+await importData();
 
 const server = new ApolloServer({
   typeDefs,
